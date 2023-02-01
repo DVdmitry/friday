@@ -1,5 +1,5 @@
 import {Directive, Host} from '@angular/core';
-import {LoggerService} from "./logger.service";
+import {LoggerService} from "../logger.service";
 
 @Directive({
   selector: '[appChild]'

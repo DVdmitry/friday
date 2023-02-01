@@ -1,11 +1,6 @@
-<div appParent>
-  <div appChild>
-  </div>
-</div>
-
-<p>Users</p>
-<div *ngFor="let user of userService.users">
-  <p>{{user.name}} - {{user.userId | performancePipe:'userId' | async}}</p>
-</div>
+<p>This is child component</p>
+<ng-container>
+  <ng-content></ng-content>
+</ng-container>
 
 
