@@ -9,6 +9,7 @@ import {LoggerService} from "./logger.service";
 import {PerformancePipe} from "./perfomance.pipe";
 import {ChildComponent} from "./child-component/child.component";
 import {CustomStyleDirective} from "./directives/custom-style.directive";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {CustomStyleDirective} from "./directives/custom-style.directive";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

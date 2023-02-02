@@ -8,6 +8,6 @@ import {AfterContentInit, Component, ContentChild, ElementRef} from '@angular/co
 export class ChildComponent implements AfterContentInit {
   @ContentChild('contentChild1') contentChild1: ElementRef | undefined
   ngAfterContentInit() {
-    console.log('this.contentChild1', this.contentChild1)
+    // console.log('this.contentChild1', this.contentChild1)
   }
 }

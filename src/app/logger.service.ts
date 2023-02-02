@@ -8,6 +8,6 @@ export class LoggerService implements ILogger {
   prefix = 'root'
 
   log(message: string) {
-    console.log(`${this.prefix}: ${message}`)
+    // console.log(`${this.prefix}: ${message}`)
   }
 }

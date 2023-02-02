@@ -10,7 +10,7 @@ export class CustomStyleDirective implements OnInit{
 
   @Input('appStyle') set setStyle(styles: Object) {
     let entries = Object.entries(styles)
-    console.log(entries)
+    // console.log(entries)
     for (let entry of entries) {
       this.renderer.setStyle(this.el.nativeElement, entry[0], entry[1])
     }
