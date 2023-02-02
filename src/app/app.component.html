@@ -1,21 +1,24 @@
-<div appParent>
-  <div appChild>
-  </div>
-</div>
+<!--<div appParent>-->
+<!--  <div appChild>-->
+<!--  </div>-->
+<!--</div>-->
 
-<p [appStyle]="{color: 'red', background: 'blue'}">Users</p>
-<div *ngFor="let user of userService.users">
-  <p>{{user.name}} - {{user.userId | performancePipe:'userId' | async}}</p>
-</div>
-<child-component>
-  <p #contentChild1>the dynamic content</p>
-</child-component>
+<!--<p [appStyle]="{color: 'red', background: 'blue'}">Users</p>-->
+<!--<div *ngFor="let user of userService.users">-->
+<!--  <p>{{user.name}} - {{user.userId | performancePipe:'userId' | async}}</p>-->
+<!--</div>-->
+<!--<child-component>-->
+<!--  <p #contentChild1>the dynamic content</p>-->
+<!--</child-component>-->
 
-<child-component>
-  <p #contentChild2>the dynamic content 2</p>
-</child-component>
+<!--<child-component>-->
+<!--  <p #contentChild2>the dynamic content 2</p>-->
+<!--</child-component>-->
 
-<p>User 1 - {{(user1 | async)?.title}}</p>
-<p>User 2 - {{(user2 | async)?.title}}</p>
+<!--<p>User 1 - {{(user1 | async)?.title}}</p>-->
+<!--<p>User 2 - {{(user2 | async)?.title}}</p>-->
 
-<button #buttonEl>Click me</button>
+<!--<button #buttonEl>Click me</button>-->
+
+<app-toolbar></app-toolbar>
+<router-outlet></router-outlet>

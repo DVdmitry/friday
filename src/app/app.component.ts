@@ -108,35 +108,35 @@ export class AppComponent implements OnInit, AfterViewInit {
     // const subject$ = new Subject()
     // const subject$ = new BehaviorSubject(0)
     // const subject$ = new AsyncSubject()
-    const subject$ = new ReplaySubject()
-    const series$ = subject$.asObservable()
+    // const subject$ = new ReplaySubject()
+    // const series$ = subject$.asObservable()
+    //
+    // series$.subscribe(val => console.log('early sub ' + val))
+    //
+    // subject$.next(1)
+    // subject$.next(2)
+    // subject$.next(3)
+    // subject$.complete()
+    //
+    // setTimeout(() => {
+    //   series$.subscribe(val => console.log('late sub ' + val))
+    //   subject$.next(4)
+    // }, 2000)
+    //
+    // const fromTimeStamp = () => {
+    //   const time = new Date()
+    //   return new Observable(observer => {
+    //     observer.next(time)
+    //     if (!time) {
+    //       observer.error('some error')
+    //     }
+    //     observer.complete()
+    //   })
+    // }
 
-    series$.subscribe(val => console.log('early sub ' + val))
-
-    subject$.next(1)
-    subject$.next(2)
-    subject$.next(3)
-    subject$.complete()
-
-    setTimeout(() => {
-      series$.subscribe(val => console.log('late sub ' + val))
-      subject$.next(4)
-    }, 2000)
-
-    const fromTimeStamp = () => {
-      const time = new Date()
-      return new Observable(observer => {
-        observer.next(time)
-        if (!time) {
-          observer.error('some error')
-        }
-        observer.complete()
-      })
-    }
-
-    const obs$ = fromTimeStamp()
-    obs$.subscribe(console.log)
-    setTimeout(() => obs$.subscribe(console.log), 3549)
+    // const obs$ = fromTimeStamp()
+    // obs$.subscribe(console.log)
+    // setTimeout(() => obs$.subscribe(console.log), 3549)
   }
 
   ngAfterViewInit() {

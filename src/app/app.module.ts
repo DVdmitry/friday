@@ -10,6 +10,9 @@ import {PerformancePipe} from "./perfomance.pipe";
 import {ChildComponent} from "./child-component/child.component";
 import {CustomStyleDirective} from "./directives/custom-style.directive";
 import {HttpClientModule} from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ToolbarModule} from "./toolbar/toolbar.module";
+import {HomeModule} from "./home/home.module";
 
 @NgModule({
   declarations: [
@@ -18,12 +21,15 @@ import {HttpClientModule} from "@angular/common/http";
     ChildDirective,
     PerformancePipe,
     ChildComponent,
-    CustomStyleDirective
+    CustomStyleDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToolbarModule,
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
