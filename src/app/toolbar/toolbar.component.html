@@ -5,11 +5,11 @@
     </button>
     <span>Angular Routing</span>
     <span class="example-spacer"></span>
-    <button mat-button class="example-icon favorite-icon" [routerLink]="'home'">
+    <a mat-button class="example-icon favorite-icon" routerLinkActive="active" routerLink="/home">
       Home
-    </button>
-    <button mat-button  [routerLink]="'admin'">
+    </a>
+    <a mat-button routerLinkActive="active" routerLink="/admin">
       Admin
-    </button>
+    </a>
   </mat-toolbar>
 </p>
