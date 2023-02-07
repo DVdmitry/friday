@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {isDevMode, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,12 @@ import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ToolbarModule} from "./toolbar/toolbar.module";
 import {HomeModule} from "./home/home.module";
+import {PostModule} from "./post/post.module";
+import {StoreModule} from "@ngrx/store";
+import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {EffectsModule} from "@ngrx/effects";
+import { BooksComponent } from './books/pages/books.component';
+import {BooksModule} from "./books/books.module";
 
 @NgModule({
   declarations: [
@@ -30,6 +36,15 @@ import {HomeModule} from "./home/home.module";
     BrowserAnimationsModule,
     ToolbarModule,
     HomeModule,
+    PostModule,
+    BooksModule,
+    EffectsModule.forRoot(),
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: !isDevMode(), // Restrict extension to log-only mode
+      autoPause: true, // Pauses recording actions and state changes when the extension window is not open
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
