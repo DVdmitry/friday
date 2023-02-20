@@ -17,7 +17,6 @@ import {PostModule} from "./post/post.module";
 import {StoreModule} from "@ngrx/store";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {EffectsModule} from "@ngrx/effects";
-import { BooksComponent } from './books/pages/books.component';
 import {BooksModule} from "./books/books.module";
 
 @NgModule({
